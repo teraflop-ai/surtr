@@ -4,7 +4,10 @@ version = "0.1.00"
 description = "Add your description here"
 readme = "README.md"
 requires-python = ">=3.10"
-dependencies = []
+dependencies = [
+    "anyscale>=0.26.68",
+    "hcloud>=2.9.0",
+]
 
 [tool.uv]
 package = true
