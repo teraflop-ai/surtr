@@ -12,14 +12,14 @@ class AnyscaleCluster:
     def __init__(
         self,
         cloud: str = "anyscale",
-        head_node_type:str = "m4.xlarge",
-        worker_node_type:str = "g4dn.xlarge",
+        head_node_type: str = "m4.xlarge",
+        worker_node_type: str = "g4dn.xlarge",
         min_worker_nodes: int = 2,
         max_worker_nodes: int = 2,
-        market_type = MarketType.SPOT,
+        market_type=MarketType.SPOT,
         job_name: str = "my-job",
         entrypoint: str = "python run.py",
-        working_dir: str =".",
+        working_dir: str = ".",
         max_retries: int = 1,
         requirements: str = "requirements.txt",
     ):
@@ -62,4 +62,4 @@ class AnyscaleCluster:
         )
 
     def submit_job(self):
-        anyscale.job.submit(self.config())
+        anyscale.job.submit(self.job_config())
